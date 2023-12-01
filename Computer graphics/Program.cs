@@ -9,6 +9,10 @@ namespace Computer_graphics
     {
         private static void Main()
         {
+            /*using (Game game = new Game(800, 600, "Computer graphics"))
+            {
+                game.Run();
+            }*/
             var nativeWindowSettings = new NativeWindowSettings()
             {
                 Size = new Vector2i(800, 600),
@@ -17,7 +21,7 @@ namespace Computer_graphics
                 Flags = ContextFlags.ForwardCompatible,
             };
 
-            using (var game = new Game(GameWindowSettings.Default, nativeWindowSettings))
+            using (Game game = new Game(GameWindowSettings.Default, nativeWindowSettings))
             {
                 game.Run();
             }
